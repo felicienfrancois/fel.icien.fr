@@ -16,11 +16,19 @@
 <!-- CSS -->
 <link href="font.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
+<script src="https://unpkg.com/alpinejs"></script>
+<script src="gradient.js"></script>
 </head>
 <body>
-  <img src="felicien.jpg">
+  <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
+  <img src="felicien.png">
   <h1>Félicien François</h1>
-  <p>contact.fel@icien.fr</p>
-  <p>06 14 20 88 44</p>
+  <p><span>🏡 </span> Issy Les Moulineaux, France</p>
+  <p><span>📧 </span> <a x-text="atob('Y29udGFjdC5mZWxAaWNpZW4uZnI=')" x-bind:href="atob('Y29udGFjdC5mZWxAaWNpZW4uZnI=')"></a></p>
+  <p><span>📱 </span> <a x-text="atob('KzMzICgwKTYgMTQgMjAgODggNDQ=')" x-bind:href="atob('bWFpbHRvOmNvbnRhY3QuZmVsQGljaWVuLmZy')"></a></p>
+  <script>
+	var gradient = new Gradient();
+	gradient.initGradient('#gradient-canvas');
+  </script>
 </body>
 </html>
